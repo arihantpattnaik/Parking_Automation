@@ -1,0 +1,40 @@
+<!-- static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Automation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Parking Automation System</h1>
+    
+    <div class="container">
+        <h2>Create New Parking Slot</h2>
+        <form id="createForm">
+            <div class="form-group">
+                <label>Floor: <input type="number" id="parkFloor" required></label>
+            </div>
+            <div class="form-group">
+                <label>Price: <input type="number" step="0.01" id="parkPrice" required></label>
+            </div>
+            <div class="form-group">
+                <label>Owner Name: <input type="text" id="ownerName"></label>
+            </div>
+            <div class="form-group">
+                <label>Owner Number: <input type="text" id="ownerNumber"></label>
+            </div>
+            <button type="submit">Create Slot</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Parking Slots</h2>
+        <button onclick="getAllParkings()" class="refresh-btn">Refresh List</button>
+        <div id="parkingList"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
